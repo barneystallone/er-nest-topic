@@ -1,0 +1,13 @@
+{
+  "OK": "Thành công",
+  "CREATED": "Thêm mới thành công",
+  "NO_CONTENT": "Phản hồi thành công mà không có nội dung",
+  "REDIRECT": "Chuyển hướng",
+  "INVALID_PARAMETER": " Dữ liệu không hợp lệ ",
+  "UNAUTHORIZED_ACCESS": "Truy cập Không được ủy quyền",
+  "ACTION_NOT_ALLOWED": "Action có quyền truy cập",
+  "OBJECT_NOT_FOUND": "Không tìm thấy kết quả",
+  "METHOD_NOT_ALLOWED": "Phương thức này không được cho phép  ",
+  "INTERNAL_SERVER_ERROR": " Lỗi hệ thống ",
+  "TIMEOUT": "Request bị hủy vì thời gian phản hồi quá lâu"
+}
