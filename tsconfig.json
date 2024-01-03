@@ -20,7 +20,12 @@
     "paths": {
       "@/*": ["./src/*"],
       "@lib/*": ["./src/lib/*"],
-      "@generated/*": ["./src/generated/*"]
+      "@generated/*": ["./src/generated/*"],
+      "@modules/*": ["./src/modules/*"],
+      "@configs/*": ["./src/configs/*"],
+      "@databases/*": ["./src/databases/*"],
+      "@entities/*": ["./src/entities/*"],
+      "@common/*": ["./src/common/*"]
     }
   }
 }

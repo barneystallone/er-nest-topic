@@ -1,9 +1,15 @@
 # compiled output
 /dist
 /node_modules
+
+
+
+/.vscode 
 /temp
-README-private.md 
-/.vscode
+# .env.development
+# .env.production
+README-private.md
+
 
 # Logs
 logs

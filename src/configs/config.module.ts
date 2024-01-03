@@ -1,7 +1,22 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
+import * as Joi from 'joi';
+import { app, appConfValidateSchema, database, databaseConfValidateSchema } from './registrations';
 
 @Module({
-  imports: [ConfigModule.forRoot({ isGlobal: true, envFilePath: '.env' })],
+  imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+      envFilePath: [`${process.cwd()}/.env.${process.env.NODE_ENV}`],
+      expandVariables: true,
+      cache: true,
+      load: [app, database],
+      validationSchema: Joi.object({
+        ...appConfValidateSchema,
+        ...databaseConfValidateSchema,
+        // @more
+      }),
+    }),
+  ],
 })
 export class NestConfigModule {}
