@@ -1,0 +1,9 @@
+{
+  "emailVerification": {
+    "helloPhrase": "Hello",
+    "thankPhrase": "Thank you for registering an account. To complete the registration process, please use the following OTP code:",
+    "enterCodePhrase": "Please enter this OTP code on the website to verify your email address.",
+    "regard": "Best regards,",
+    "supportTeam": "Support Team"
+  }
+}

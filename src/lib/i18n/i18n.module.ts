@@ -21,6 +21,7 @@ import { AcceptLanguageResolver, HeaderResolver, I18nModule, QueryResolver } fro
             watch: true,
             includeSubfolders: true,
           },
+          viewEngine: 'hbs',
           logging: true,
           includeSubfolders: true,
           typesOutputPath: configService.get('NODE_ENV').startsWith('prod')

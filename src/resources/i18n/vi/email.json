@@ -1,0 +1,9 @@
+{
+  "emailVerification": {
+    "helloPhrase": "Xin chào",
+    "thankPhrase": "Cảm ơn bạn đã đăng ký tài khoản. Để hoàn tất quá trình đăng ký, vui lòng sử dụng mã OTP sau đây:",
+    "enterCodePhrase": "Vui lòng nhập mã OTP này vào trang web để xác minh địa chỉ email của bạn.",
+    "regard": "Trân trọng,",
+    "supportTeam": "Đội ngũ hỗ trợ"
+  }
+}
