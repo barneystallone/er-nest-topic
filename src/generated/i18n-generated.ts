@@ -2,6 +2,9 @@
 
 import { Path } from "nestjs-i18n";
 export type I18nTranslations = {
+    "email": {
+        "emailVerification": string;
+    };
     "test": {
         "HELLO": string;
     };
