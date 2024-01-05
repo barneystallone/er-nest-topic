@@ -1,0 +1,3 @@
+{
+  "email": "<p>Xin chào {email},</p> <p>Cảm ơn bạn đã đăng ký tài khoản. Để hoàn tất quá trình đăng ký, vui lòng sử dụng mã OTP sau đây:</p><p><strong>{otp}</strong></p> <p>Vui lòng nhập mã OTP này vào trang web để xác minh địa chỉ email của bạn.</p><p>Trân trọng,<br>Đội ngũ hỗ trợ</p>"
+}

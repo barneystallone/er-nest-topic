@@ -5,10 +5,10 @@ export abstract class NestBaseEntity {
   @PrimaryKey()
   id = uuid();
 
-  @Property()
+  @Property({ hidden: true })
   deleted_at?: Date | null;
 
-  @Property({ hidden: true })
+  @Property()
   created_at = new Date();
 
   @Property({

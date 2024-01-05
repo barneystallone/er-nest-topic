@@ -2,6 +2,9 @@
 
 import { Path } from "nestjs-i18n";
 export type I18nTranslations = {
+    "exception": {
+        "emailExists": string;
+    };
     "test": {
         "HELLO": string;
     };
@@ -18,6 +21,12 @@ export type I18nTranslations = {
             "METHOD_NOT_ALLOWED": string;
             "INTERNAL_SERVER_ERROR": string;
             "TIMEOUT": string;
+            "UN_PROCESSABLE_ENTITY": string;
+        };
+    };
+    "templates": {
+        "email-verification": {
+            "email": string;
         };
     };
 };
