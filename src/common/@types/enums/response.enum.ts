@@ -31,20 +31,3 @@ export enum APP_CODE {
   INTERNAL_SERVER_ERROR = 'INTERNAL_SERVER_ERROR',
   TIMEOUT = 'TIMEOUT',
 }
-
-/**
- * @see https://docs.google.com/spreadsheets/d/1E00EAiQ_OvmwJDmjUwNJaruzasgwLeurWhjmqICXxSg/edit#gid=1063545474
- */
-// export enum HTTP_MESSAGE {
-//   OK = 'Response with no error',
-//   CREATED = 'Created',
-//   NO_CONTENT = 'Response success with no content',
-//   REDIRECT = 'Redirect',
-//   INVALID_PARAMETER = 'Validation error',
-//   UNAUTHORIZED_ACCESS = 'Unauthorized',
-//   ACTION_NOT_ALLOWED = 'Access denied',
-//   OBJECT_NOT_FOUND = 'Page not found, data not found',
-//   METHOD_NOT_ALLOWED = 'Unsupported request',
-//   INTERNAL_SERVER_ERROR = 'Internal server error',
-//   TIMEOUT = 'API gateway timeout',
-// }

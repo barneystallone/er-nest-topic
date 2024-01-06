@@ -1,5 +1,5 @@
 import { translate } from '@/lib';
-import { HTTP_STATUS_CODE } from '../types';
+import { HTTP_STATUS_CODE } from '../@types';
 
 export type Data = Record<string, any> | Record<string, any>[];
 /**

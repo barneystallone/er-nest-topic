@@ -13,8 +13,10 @@ import {
 @ValidatorConstraint({ async: false })
 export class IsAfterConstraint implements ValidatorConstraintInterface {
   validate(dateStr: string, args: ValidationArguments) {
+    if (!dateStr) return false;
+
     const referenceProperty = args.object[args.constraints[0]] satisfies string;
-    return +new Date(dateStr) > +new Date(referenceProperty);
+    return Number(new Date(dateStr)) > Number(new Date(referenceProperty));
   }
 
   defaultMessage(args: ValidationArguments) {

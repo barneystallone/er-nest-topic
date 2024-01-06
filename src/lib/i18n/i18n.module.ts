@@ -1,11 +1,7 @@
+import { AppHelper } from '@/common';
 import { Module } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import {
-  AcceptLanguageResolver,
-  HeaderResolver,
-  I18nModule,
-  QueryResolver,
-} from 'nestjs-i18n';
+import { AcceptLanguageResolver, HeaderResolver, I18nModule, QueryResolver } from 'nestjs-i18n';
 
 /**
  * @see https://nestjs-i18n.com/quick-start
@@ -21,7 +17,7 @@ import {
             vi: 'vi',
           },
           loaderOptions: {
-            path: `${process.cwd()}/src/resources/i18n/`,
+            path: `${AppHelper.getRootDir()}/resources/i18n/`,
             watch: true,
             includeSubfolders: true,
           },

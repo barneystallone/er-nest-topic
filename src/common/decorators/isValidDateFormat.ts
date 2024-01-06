@@ -11,6 +11,8 @@ const VALID_DATE_FORMATS = ['MM-dd-yyyy', 'MM/dd/yyyy'];
 @ValidatorConstraint({ async: false })
 export class IsValidDateFormatConstraint implements ValidatorConstraintInterface {
   validate(dateStr: string): boolean {
+    if (!dateStr) return false;
+
     for (const format of VALID_DATE_FORMATS) {
       if (isMatch(dateStr, format)) return true;
     }
