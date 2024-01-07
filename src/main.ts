@@ -5,6 +5,7 @@ import { NestFactory } from '@nestjs/core';
 import * as compression from 'compression';
 import helmet from 'helmet';
 import { AppModule } from './app.module';
+import { HttpLoggerInterceptor } from './common';
 // moduleAlias.addAliases({
 //   '@': resolve(__dirname, 'src'),
 // });
@@ -23,7 +24,7 @@ async function bootstrap() {
     maxAge: 5000,
     origin: '*', //  only dev mode
   });
-
+  app.useGlobalInterceptors(new HttpLoggerInterceptor());
   app.setGlobalPrefix(prefix);
   app.useGlobalPipes(new ValidationPipe());
 

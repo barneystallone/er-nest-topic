@@ -13,6 +13,7 @@ import {
 @ValidatorConstraint({ async: false })
 export class IsAfterNowConstraint implements ValidatorConstraintInterface {
   validate(dateStr: string) {
+    if (!dateStr) return false;
     return +new Date(dateStr) > +new Date();
   }
 
