@@ -9,5 +9,6 @@
   "OBJECT_NOT_FOUND": "Không tìm thấy kết quả",
   "METHOD_NOT_ALLOWED": "Phương thức này không được cho phép  ",
   "INTERNAL_SERVER_ERROR": " Lỗi hệ thống ",
-  "TIMEOUT": "Request bị hủy vì thời gian phản hồi quá lâu"
+  "TIMEOUT": "Request bị hủy vì thời gian phản hồi quá lâu",
+  "UN_PROCESSABLE_ENTITY": "Không thể xử lý"
 }
