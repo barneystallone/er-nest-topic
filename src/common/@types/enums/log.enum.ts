@@ -1,0 +1,5 @@
+export enum LOG_TYPES {
+  REQUEST = 'REQUEST',
+  RESPONSE = 'RESPONSE',
+  ERROR = 'ERROR',
+}

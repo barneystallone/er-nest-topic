@@ -4,7 +4,9 @@ import { ConfigService } from '@nestjs/config';
 import { NestFactory } from '@nestjs/core';
 import * as compression from 'compression';
 import helmet from 'helmet';
+import { WINSTON_MODULE_NEST_PROVIDER, WinstonLogger } from 'nest-winston';
 import { AppModule } from './app.module';
+import { LogResponseInterceptor } from './common';
 // moduleAlias.addAliases({
 //   '@': resolve(__dirname, 'src'),
 // });
@@ -24,8 +26,11 @@ async function bootstrap() {
     origin: '*', //  only dev mode
   });
 
+  const winstonLogger: WinstonLogger = app.get(WINSTON_MODULE_NEST_PROVIDER);
+
   app.setGlobalPrefix(prefix);
   app.useGlobalPipes(new ValidationPipe());
+  app.useGlobalInterceptors(new LogResponseInterceptor(winstonLogger));
 
   // Starts listening for shutdown hooks
   app.enableShutdownHooks();
