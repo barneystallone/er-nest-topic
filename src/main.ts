@@ -1,5 +1,5 @@
 import { Config } from '@/configs';
-import { Logger, ValidationPipe } from '@nestjs/common';
+import { Logger, NotFoundException, ValidationPipe } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { NestFactory } from '@nestjs/core';
 import * as compression from 'compression';
@@ -25,7 +25,15 @@ async function bootstrap() {
   });
 
   app.setGlobalPrefix(prefix);
-  app.useGlobalPipes(new ValidationPipe());
+  app.useGlobalPipes(
+    // new ValidationPipe422(),
+    new ValidationPipe({
+      exceptionFactory(errors) {
+        console.log(errors[0]);
+        return new NotFoundException();
+      },
+    }),
+  );
 
   // Starts listening for shutdown hooks
   app.enableShutdownHooks();

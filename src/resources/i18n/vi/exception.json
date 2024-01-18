@@ -1,0 +1,30 @@
+{
+  "CUS-0403": {
+    "title": "Người dùng chưa được xác thực",
+    "message": "Xác thực người dùng không được thực hiện. Bạn cần phải đăng nhập lại."
+  },
+  "CUS-0405": {
+    "title": "Xác thực người dùng đã hết hạn",
+    "message": "Phiên xác thực người dùng đã hết hạn. Hãy bắt đầu lại từ đầu. Bật hỗ trợ trình đọc màn hình"
+  },
+  "CUS-0500": {
+    "title": "Lỗi hệ thống",
+    "message": "Đã xảy ra lỗi máy chủ nội bộ. Vui lòng liên hệ với chúng tôi nếu vấn đề không được giải quyết."
+  },
+  "CUS-0602": {
+    "title": "Lỗi hệ thống",
+    "message": "Đã xảy ra lỗi máy chủ nội bộ. Vui lòng liên hệ với chúng tôi nếu vấn đề không được giải quyết."
+  },
+  "CUS-0603": {
+    "title": "Lỗi hệ thống",
+    "message": "Các giá trị đầu vào không hợp lệ. Vui lòng kiểm tra lại."
+  },
+  "CUS-0605": {
+    "title": "Lỗi hệ thống",
+    "message": "Đã xảy ra lỗi máy chủ nội bộ. Vui lòng liên hệ với chúng tôi nếu vấn đề không được giải quyết."
+  },
+  "CUS-0604": {
+    "title": "Lỗi hệ thống",
+    "message": "Đã xảy ra lỗi máy chủ nội bộ. Vui lòng liên hệ với chúng tôi nếu vấn đề không được giải quyết."
+  }
+}
