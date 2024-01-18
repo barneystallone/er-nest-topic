@@ -1,4 +1,4 @@
-import type { I18nPath, I18nTranslations } from '@generated/i18n-generated';
+import type { I18nPath, I18nTranslations } from '@/generated/i18n-generated';
 import { I18nContext, TranslateOptions } from 'nestjs-i18n';
 
 /**
