@@ -1,0 +1,30 @@
+{
+  "CUS-0403": {
+    "title": "User not authenticated",
+    "message": "User authentication is not done. You need to log in again."
+  },
+  "CUS-0405": {
+    "title": "User authentication expired",
+    "message": "The expiration date of user authentication has expired. Please start over again from the beginning. Turn on screen reader support"
+  },
+  "CUS-0500": {
+    "title": "System error",
+    "message": "An internal server error occurred. Please contact us if the problem is not solved."
+  },
+  "CUS-0602": {
+    "title": "System error",
+    "message": "An internal server error occurred. Please contact us if the problem is not solved."
+  },
+  "CUS-0603": {
+    "title": "System error",
+    "message": "One or more field input values are invalid. Please check again."
+  },
+  "CUS-0605": {
+    "title": "System error",
+    "message": "An internal server error occurred. Please contact us if the problem is not solved."
+  },
+  "CUS-0604": {
+    "title": "System error",
+    "message": "An internal server error occurred. Please contact us if the problem is not solved."
+  }
+}

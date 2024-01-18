@@ -1,10 +1,9 @@
-import { DataMaskingHelper, LOG_TYPES, LogFormatHelper } from '@/common';
-import { AppHelper } from '@/common/helpers/app.helper';
+import { AppHelper, DataMaskingHelper, LOG_TYPES, LogFormatHelper } from '@/common';
 import { format, transports } from 'winston';
 import 'winston-daily-rotate-file';
 
 const { timestamp, printf } = format;
-const FORMAT_TYPES_STRING = Object.keys(LOG_TYPES).join('');
+const getLogTypes = () => Object.keys(LOG_TYPES).join('');
 
 const maskData = format((info) => {
   info = true || AppHelper.isProd() ? DataMaskingHelper.maskData(info) : info;
@@ -15,7 +14,7 @@ const inlineFormat = printf((info) => {
   const { level, message, timestamp, type } = info;
   const logMessage = `${level.toUpperCase()} ${timestamp}`;
 
-  if (FORMAT_TYPES_STRING.includes(type)) {
+  if (getLogTypes().includes(type)) {
     return LogFormatHelper[type as keyof typeof LogFormatHelper](logMessage, message);
   }
 

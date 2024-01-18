@@ -1,4 +1,4 @@
-import { SuccessResponse } from '@/common/helpers';
+import { SuccessResponse } from '../classes';
 import { LOG_TYPES } from '../enums';
 
 export interface ResponseLog {

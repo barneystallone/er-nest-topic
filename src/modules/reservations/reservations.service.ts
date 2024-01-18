@@ -2,8 +2,9 @@ import { Reservation } from '@/entities';
 import { wrap } from '@mikro-orm/core';
 import { EntityManager, EntityRepository } from '@mikro-orm/mysql';
 import { InjectRepository } from '@mikro-orm/nestjs';
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { CreateReservationDto, UpdateReservationDto } from './dto';
+import { BaseException, ResourceNotFoundException } from '@/common/@types';
 
 @Injectable()
 export class ReservationsService {
@@ -32,7 +33,7 @@ export class ReservationsService {
   ): Promise<Reservation> {
     const foundReservation = await this.reservationRepo.findOne({ id });
 
-    if (!foundReservation) throw new NotFoundException();
+    if (!foundReservation) throw new BaseException('CUS-0602');
     wrap(foundReservation).assign(updateReservationDto);
 
     return this.em.flush().then(() => foundReservation);
@@ -44,7 +45,8 @@ export class ReservationsService {
   async findOneAndDelete(id: string): Promise<Reservation> {
     const foundReservation = await this.reservationRepo.findOne({ id });
 
-    if (!foundReservation) throw new NotFoundException();
+    // if (!foundReservation) throw new NotFoundException({ message: 'notfound', code: 1123 });
+    if (!foundReservation) throw new ResourceNotFoundException();
     await this.em.removeAndFlush(foundReservation);
 
     return foundReservation;

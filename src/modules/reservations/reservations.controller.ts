@@ -1,10 +1,11 @@
-import { OK } from '@/common';
+import { ERROR_CASE, OK, ValidationErrorId } from '@/common';
 import { Body, Controller, Delete, Get, Param, ParseUUIDPipe, Patch, Post } from '@nestjs/common';
 import { CreateReservationDto } from './dto/create-reservation.dto';
 import { UpdateReservationDto } from './dto/update-reservation.dto';
 import { ReservationsService } from './reservations.service';
 import { ListReservationResponse, ReservationResponse } from './response.interface';
 
+@ValidationErrorId(ERROR_CASE.INVALID_PARAMETER_VALIDATION)
 @Controller('reservations')
 export class ReservationsController {
   constructor(private readonly reservationsService: ReservationsService) {}
