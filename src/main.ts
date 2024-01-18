@@ -1,15 +1,18 @@
+import {
+  BaseExceptionFiter,
+  BaseValidationPipe,
+  LogResponseInterceptor,
+  ParseErrorInterceptor,
+} from '@/common';
 import { Config } from '@/configs';
-import { Logger, ValidationPipe } from '@nestjs/common';
+import { Logger } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import { NestFactory } from '@nestjs/core';
+import { NestFactory, Reflector } from '@nestjs/core';
 import * as compression from 'compression';
 import helmet from 'helmet';
 import { WINSTON_MODULE_NEST_PROVIDER, WinstonLogger } from 'nest-winston';
 import { AppModule } from './app.module';
-import { LogResponseInterceptor } from './common';
-// moduleAlias.addAliases({
-//   '@': resolve(__dirname, 'src'),
-// });
+
 const logger = new Logger('Bootstrap');
 
 async function bootstrap() {
@@ -29,8 +32,12 @@ async function bootstrap() {
   const winstonLogger: WinstonLogger = app.get(WINSTON_MODULE_NEST_PROVIDER);
 
   app.setGlobalPrefix(prefix);
-  app.useGlobalPipes(new ValidationPipe());
-  app.useGlobalInterceptors(new LogResponseInterceptor(winstonLogger));
+  app.useGlobalInterceptors(
+    new LogResponseInterceptor(winstonLogger),
+    new ParseErrorInterceptor(new Reflector()),
+  );
+  app.useGlobalPipes(new BaseValidationPipe());
+  app.useGlobalFilters(new BaseExceptionFiter());
 
   // Starts listening for shutdown hooks
   app.enableShutdownHooks();

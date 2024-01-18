@@ -6,14 +6,15 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-      target: development # production / development
-    command: pnpm start:dev # Dev only
+      target: development #development # - development # production / development
+
+    command: pnpm start:dev # Dev only # pnpm start:prod
     env_file:
       - .env.development
       # - .env.production
     ports:
       - '3000:3000'
-    volumes:
+    volumes: # Dev only
       - .:/usr/src/app # Dev only
   db:
     container_name: nest_mysql

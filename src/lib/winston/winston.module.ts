@@ -1,5 +1,6 @@
 import { LogRequestMiddleware } from '@/common';
 import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
 import { WinstonModule } from 'nest-winston';
 import { NestTransports } from './transport.config';
 
@@ -9,6 +10,7 @@ import { NestTransports } from './transport.config';
       useFactory: () => ({
         transports: [...NestTransports],
       }),
+      inject: [ConfigService],
     }),
   ],
 })

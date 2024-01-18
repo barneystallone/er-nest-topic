@@ -11,6 +11,36 @@ export type I18nTranslations = {
             "supportTeam": string;
         };
     };
+    "exception": {
+        "CUS-0403": {
+            "title": string;
+            "message": string;
+        };
+        "CUS-0405": {
+            "title": string;
+            "message": string;
+        };
+        "CUS-0500": {
+            "title": string;
+            "message": string;
+        };
+        "CUS-0602": {
+            "title": string;
+            "message": string;
+        };
+        "CUS-0603": {
+            "title": string;
+            "message": string;
+        };
+        "CUS-0605": {
+            "title": string;
+            "message": string;
+        };
+        "CUS-0604": {
+            "title": string;
+            "message": string;
+        };
+    };
     "test": {
         "HELLO": string;
     };
